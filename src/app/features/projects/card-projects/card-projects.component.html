@@ -1,10 +1,10 @@
-<div class="content" fxLayout="row wrap" fxLayoutGap="20px grid" >
-  <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of [1,2,3,4,5,6,7]">
+<div [@cardAnimation]="cards.length" class="content" fxLayout="row wrap" fxLayoutGap="20px grid" >
+  <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of cards">
     <mat-card class="mat-elevation-z4" >
       <mat-card-header>
         <mat-card-title>Project {{num}}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="./../../../../assets/img/9.png">
+      <img mat-card-image src="assets/img/9.png">
       <mat-card-content>
         <p>
           The create project with Angular...
