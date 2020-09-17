@@ -29,8 +29,6 @@ import { AboutModule } from './features/about/about.module';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    ProjectsModule,
-    AboutModule.
   ],
   providers: [
   ],
