@@ -9,10 +9,12 @@ const routes: Routes = [
   {
     path: 'projects',
     loadChildren: () => import('./features/projects/projects.module').then(m => m.ProjectsModule),
+    data: {animation: 'ProjectsView'}
   },
   {
     path: 'about',
     loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule),
+    data: {animation: 'AboutView'}
   },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },

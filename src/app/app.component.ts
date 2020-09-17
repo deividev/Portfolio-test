@@ -1,6 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { tsParticles } from "tsparticles";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -33,5 +34,7 @@ export class AppComponent {
     this.componentCssClass = nameClass;
   }
 
-
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  }
 }
