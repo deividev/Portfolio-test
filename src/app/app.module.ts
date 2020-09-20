@@ -14,6 +14,7 @@ import { SharedModule } from './shared/shared.module'
 import { MaterialModule } from './material/material.module';
 import { ProjectsModule } from './features/projects/projects.module';
 import { AboutModule } from './features/about/about.module';
+import { CommonModule } from '@angular/common';
 //Inicio services libraries
 
 
@@ -24,6 +25,7 @@ import { AboutModule } from './features/about/about.module';
     HomeComponent,
   ],
   imports: [
+    CommonModule,
     CoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,

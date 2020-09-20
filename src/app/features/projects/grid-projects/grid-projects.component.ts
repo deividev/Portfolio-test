@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from './../../../app.component'
 
 @Component({
   selector: 'app-grid-projects',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appComp: AppComponent) { }
 
   ngOnInit(): void {
   }
 
   getState(outlet) {
     // Changing the activatedRouteData.state triggers the animation
-    return outlet.activatedRouteData.state;
+    return this.appComp.getState(outlet);
   }
 }
