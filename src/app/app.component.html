@@ -1,7 +1,7 @@
-<div id="tsparticles">
+<app-header></app-header>
+<main  [@routerTransition]="getState(o)">
+  <div id="tsparticles" class="particles">
 
-</div>
-<div [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet>
-</div>
-
+  </div>
+  <router-outlet #o="outlet"> </router-outlet>
+</main>

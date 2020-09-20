@@ -13,6 +13,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module'
 import { MaterialModule } from './material/material.module';
 import { ProjectsModule } from './features/projects/projects.module';
+import { AboutModule } from './features/about/about.module';
+import { CommonModule } from '@angular/common';
 //Inicio services libraries
 
 
@@ -20,15 +22,15 @@ import { ProjectsModule } from './features/projects/projects.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
+    CommonModule,
     CoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    ProjectsModule
   ],
   providers: [
   ],
