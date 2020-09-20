@@ -1,4 +1,8 @@
 <app-header></app-header>
+<main [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+
 <section class="mat-drawer-container">
   <mat-toolbar fxLayoutAlign="center center" fxLayout="column" color="accent">
     <span>Works</span>

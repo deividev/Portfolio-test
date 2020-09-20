@@ -12,4 +12,8 @@ export class GridProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getState(outlet) {
+    // Changing the activatedRouteData.state triggers the animation
+    return outlet.activatedRouteData.state;
+  }
 }
