@@ -1,5 +1,5 @@
 <div fxLayoutAlign="center center">
-  <mat-card @aboutAnimation  class="mat-elevation-z4" color="primary">
+  <mat-card   class="mat-elevation-z4" color="primary">
     <mat-card-header  fxLayoutAlign="center center">
       <img class="img-user mat-elevation-z4" src="assets/img/circle-cropped.png">
       <mat-card-title>
@@ -11,9 +11,9 @@
     <mat-card-content>
     <p>Sobre mi, amet consectetur adipisicing elit. Minima quia, commodi labore omnis neque culpa esse cum. Atque exercitationem soluta officiis libero, unde assumenda voluptate iure asperiores, fugiat repudiandae ullam?</p>
     <h2>Experience</h2>
-    <mat-accordion class="mat-elevation-z4">
+    <mat-accordion @aboutAnimation class="mat-elevation-z4">
       <mat-expansion-panel  (opened)="panelOpenState = true"
-                          (closed)="panelOpenState = false">
+                            (closed)="panelOpenState = false">
       <mat-expansion-panel-header>
       <mat-panel-title class="text-bold">
         Boream

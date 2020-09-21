@@ -19,8 +19,8 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
         [
         animate('0.8s ease-in', keyframes(
         [
-            style({ opacity: 0, transform: 'translateY( -50%)', offset: 0 }),
-            style({ opacity: .5, transform: 'translateY( -10px) scale(1.1)', offset: 0.3 }),
+            style({ opacity: 0.4, transform: 'translateY( 50%)', offset: 0 }),
+            style({ opacity: .8, transform: 'translateY( 10px) scale(1.1)', offset: 0.3 }),
             style({ opacity: 1, transform: 'translateY(0)', offset: 1 }),
           ]))
           ]), { optional: true }),
@@ -40,6 +40,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 export class CardAboutComponent implements OnInit {
 
   panelOpenState = false;
+
 
   constructor() { }
 
