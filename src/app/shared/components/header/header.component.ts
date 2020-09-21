@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
 
     this.router.get(`${environment.apiUrl}menu-items`).subscribe((Items:MenuItem) => {
       this.menuItems= Items;
-      console.log(this.menuItems);
     })
   }
 }
