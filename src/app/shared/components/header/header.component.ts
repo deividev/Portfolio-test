@@ -1,5 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuItem } from '../../../models/menu-item';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { environment } from './../../../../environments/environment'
 
 @Component({
   selector: 'app-header',
@@ -8,29 +11,17 @@ import { MenuItem } from '../../../models/menu-item';
 })
 export class HeaderComponent implements OnInit {
 
-  menuItems: MenuItem[] = [
-    {
-      label: 'About',
-      icon: 'assignment_ind',
-      route: 'about'
-    },
-    {
-      label: 'Works',
-      icon: 'ad_units',
-      route: 'projects'
-    },
-    {
-      label: 'Blog',
-      icon: 'article',
-      route: 'blog'
-    },
-  ];
+  menuItems: MenuItem;
 
   checked = true;
 
-  constructor( ) { }
+  constructor(public router: HttpClient) { }
 
   ngOnInit(): void {
 
+    this.router.get(`${environment.apiUrl}menu-items`).subscribe((Items:MenuItem) => {
+      this.menuItems= Items;
+      console.log(this.menuItems);
+    })
   }
 }

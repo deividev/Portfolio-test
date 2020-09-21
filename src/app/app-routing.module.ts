@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule),
     data: { state: 'about' }
   },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent,data: {state: 'home'}  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
