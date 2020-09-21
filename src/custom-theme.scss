@@ -53,6 +53,9 @@ $candy-app-dark-theme: mat-dark-theme((
   font-weight: 700;
   color: #aa00ff;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+      font-size: 30px;
+    }
 }
 
 

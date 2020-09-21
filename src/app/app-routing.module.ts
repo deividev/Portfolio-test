@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 //Components
 import { HomeComponent } from './pages/home/home.component';
@@ -16,12 +16,20 @@ const routes: Routes = [
     loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule),
     data: { state: 'about' }
   },
-  { path: 'home', component: HomeComponent,data: {state: 'home'}  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: {state: 'home'}
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),],
+  imports: [
+    RouterModule.forRoot(routes, {
+      enableTracing: true,
+      preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
