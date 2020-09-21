@@ -11,17 +11,28 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
   animations: [
     trigger('routerTransition', [
       transition('* <=> *', [
-        query(':enter, :leave', style({position: 'fixed', width:'100%' }), { optional: true }),
+        style({ position: 'relative' }),
+        query(':enter, :leave', [
+          style({
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%'
+          }),
+        ],{ optional: true }),
+        query(':enter', [
+          style({ left: '-100%'})
+        ],{ optional: true }),
+        query(':leave', animateChild(), { optional: true }),
         group([
-          query(':enter', [
-            style({ transform: 'translateY(-18%)' }),
-            animate('0.8s ease-in-out', style({ opacity: 1, transform: 'translateY(0%)' }))
-          ], { optional: true }),
           query(':leave', [
-            style({ transform: 'translateY(100%)' }),
-            animate('0.1s ease-in-out', style({ opacity: 0.8, transform: 'translateY(100%)' }))
+            animate('300ms ease-out', style({ left: '100%'}))
           ], { optional: true }),
-        ])
+          query(':enter', [
+            animate('300ms ease-out', style({ left: '0%'}))
+          ],{ optional: true })
+        ]),
+        query(':enter', animateChild(), { optional: true }),
       ])
     ])
   ],
@@ -54,6 +65,6 @@ export class AppComponent {
 
   getState(outlet) {
     // Changing the activatedRouteData.state triggers the animation
-    return outlet.activatedRouteData.state;
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['state'];
   }
 }

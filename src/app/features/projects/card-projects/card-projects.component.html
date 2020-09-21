@@ -2,14 +2,14 @@
   <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of cards">
     <mat-card class="mat-elevation-z4" >
       <mat-card-header>
-        <mat-card-title>Project {{num}}</mat-card-title>
+        <mat-card-title>Proyecto {{num}}</mat-card-title>
       </mat-card-header>
       <img mat-card-image src="assets/img/9.png">
       <mat-card-content>
         <p>
-          The create project with Angular...
+          Proyecto creado con Angular
         </p>
-        <h4>Created with:</h4>
+        <h4>Creado con:</h4>
         <div fxLayout="row wrap">
           <button mat-raised-button disabled color="basic">Angular</button>
           <button mat-raised-button disabled color="basic">Node.js</button>
@@ -17,7 +17,7 @@
         </div>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary">Deploy</button>
+        <button mat-raised-button color="primary">Link</button>
         <button mat-raised-button color="accent">Github</button>
       </mat-card-actions>
     </mat-card>
