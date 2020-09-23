@@ -11,7 +11,7 @@ import { MaterialModule } from '../material/material.module';
 
 //FontAwesome icons
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faStackOverflow, faGithub, faMedium, faInstagram, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faStackOverflow, faGithub, faMedium, faInstagram, faInstagramSquare, faLinkedin, faHtml5,  } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope as faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -38,6 +38,6 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class SharedModule {
   constructor( private library: FaIconLibrary ){
-    library.addIcons(faStackOverflow, faGithub, faMedium, faInstagram, faInstagramSquare, faLinkedin, faEnvelope );
+    library.addIcons(faStackOverflow, faGithub, faMedium, faInstagram, faInstagramSquare, faLinkedin, faEnvelope, faHtml5 );
   }
 }
