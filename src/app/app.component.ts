@@ -21,12 +21,12 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
           }),
         ],{ optional: true }),
         query(':enter', [
-          style({ left: '-100%'})
+          style({ left: '100%'})
         ],{ optional: true }),
         query(':leave', animateChild(), { optional: true }),
         group([
           query(':leave', [
-            animate('300ms ease-out', style({ left: '100%'}))
+            animate('300ms ease-out', style({ left: '-100%'}))
           ], { optional: true }),
           query(':enter', [
             animate('300ms ease-out', style({ left: '0%'}))
