@@ -6,6 +6,15 @@
   align-items: center;
 }
 
+.img-user {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+  margin: 15px;
+}
+
 .container-icons {
   display: flex;
   justify-content: center;
@@ -20,7 +29,7 @@
 }
 
 .mat-button-base {
-  margin: 8px 8px 8px 0;
+  margin: 8px;
 }
 
 .mat-icon-button {
