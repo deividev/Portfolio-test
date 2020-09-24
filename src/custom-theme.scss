@@ -48,6 +48,12 @@ $candy-app-dark-theme: mat-dark-theme((
   }
 }
 
+//Global my styles
+
+.body, p, h1, h2, h3 {
+  line-height: 1.5rem;
+}
+
 .text-primary {
   font-size: 40px;
   font-weight: 700;
