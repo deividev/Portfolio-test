@@ -1,8 +1,7 @@
 <section class="cover mat-drawer-container mat-typography">
-  <div >
-    <mat-card   class="mat-elevation-z4" color="primary">
-      <mat-card-header>
-        <mat-card-title fxLayoutAlign="center center">
+  <mat-card class="mat-elevation-z4" color="primary">
+      <mat-card-header fxLayoutAlign="start center">
+        <mat-card-title>
           <img class="img-user mat-elevation-z4" src="assets/img/circle-cropped.png">
           <h1 class="text-primary"> David  seco diaz</h1>
         </mat-card-title>
@@ -19,8 +18,11 @@
         En estos momentos me encuentro en busqueda de una oportunidad para demostrar mis conocimientos
         y poder seguir avanzando en mi camino como desarrollador.
       </p>
-      <!-- <span class="text-bold">Skills:</span> -->
+    </mat-card-content>
+
+    <mat-card-actions>
       <div class="skills">
+        <h2 class="text-bold">Skills:</h2>
         <a target="_blank" href="" mat-icon-button>
           <mat-icon class="material-icons mr" color="accent"> <fa-icon [icon]="faHtml5"></fa-icon></mat-icon>
         </a>
@@ -52,13 +54,10 @@
           <mat-icon class="material-icons mr" color="accent"><fa-icon [icon]="['fab', 'github']"></fa-icon></mat-icon>
         </a>
       </div>
-    </mat-card-content>
-      <mat-card-actions>
-      </mat-card-actions>
-      <mat-card-footer>
-      </mat-card-footer>
-    </mat-card>
-  </div>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>
+  </mat-card>
   <div fxLayoutAlign="center center">
     <a target="_blank" href="https://github.com/deividev" mat-icon-button>
       <mat-icon class="material-icons mr" color="primary"><fa-icon [icon]="['fab', 'github']"></fa-icon></mat-icon>
