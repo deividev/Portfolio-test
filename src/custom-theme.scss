@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 
 @include mat-core();
-
+$mat-theme-ignore-duplication-warnings : true;
 // Available color palettes: https://material.io/design/color/
 $candy-app-light-primary: mat-palette($mat-orange, 600);
 $candy-app-light-accent:  mat-palette($mat-blue, 800);
@@ -47,6 +47,9 @@ $candy-app-dark-theme: mat-dark-theme((
     background-color: rgba(170, 0, 255, 0.54);
   }
 }
+
+
+// Incluya temas como de costumbre. @include angular-material-theme ( $ light-theme );
 
 //Global my styles
 
