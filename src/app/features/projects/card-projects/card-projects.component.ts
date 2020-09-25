@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import  { ProjectsService } from '../../../services/projects.service'
+import { Project } from 'src/app/models/project';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-card-projects',
@@ -54,11 +59,17 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 })
 export class CardProjectsComponent implements OnInit {
 
-  constructor() { }
+  cards: Project;
+  constructor (
+                public projectServices: ProjectsService,
+                public router: HttpClient,
+              ) { }
 
   ngOnInit(): void {
+    this.router.get(`${environment.apiUrl}projects`).subscribe((Cards: Project) => {
+      this.cards = Cards;
+    })
   }
 
-  cards = [1, 2, 3, 4, 5]
   gridColumns = 2;
 }

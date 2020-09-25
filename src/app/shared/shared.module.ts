@@ -33,7 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     CoverComponent,
     FooterComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
   ]
 })
 export class SharedModule {

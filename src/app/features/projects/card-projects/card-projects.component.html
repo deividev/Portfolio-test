@@ -1,11 +1,12 @@
-<div [@cardAnimation]="cards.length" class="content" fxLayout="row wrap" fxLayoutGap="20px grid" >
-  <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of cards">
+<div [@cardAnimation]="cards" class="content" fxLayout="row wrap" fxLayoutGap="20px grid" >
+  <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let card of cards">
     <mat-card class="mat-elevation-z4" >
       <mat-card-header>
-        <mat-card-title>Proyecto {{num}}</mat-card-title>
+        <mat-card-title> {{card.title}}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="assets/img/print3d.png">
+      <img mat-card-image [src]="card.img">
       <mat-card-content>
+        <p>{{card.description}}</p>
         <h4>Creado con:</h4>
         <div fxLayout="row wrap">
           <button mat-raised-button disabled color="basic">Angular</button>
@@ -15,7 +16,7 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button color="primary">Link</button>
-        <button mat-raised-button color="accent">Github</button>
+        <a target="_blank" [href]="card.github" mat-raised-button color="accent">Github</a>
       </mat-card-actions>
     </mat-card>
   </div>

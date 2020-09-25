@@ -19,7 +19,7 @@ import { CardProjectsComponent } from './card-projects/card-projects.component';
     MaterialModule,
   ],
   exports: [
-    GridProjectsComponent
+    GridProjectsComponent,
   ]
 })
 export class ProjectsModule { }

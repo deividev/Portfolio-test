@@ -1,8 +1,8 @@
-export interface MenuItem {
+export interface Project {
   id: number,
   title: string;
   img: string;
-  technologies: [];
+  technologies: string;
   description: string;
   github: string;
   deploy: string;
